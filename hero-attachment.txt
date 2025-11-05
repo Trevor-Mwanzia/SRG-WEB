@@ -1,0 +1,12 @@
+Please place the attached background image file in the project root with the exact filename:
+
+  hero-attachment.png
+
+Path from CSS: `css/styles.css` -> url('../hero-attachment.png')
+
+Notes:
+- This repository tool cannot write binary image files for you. Save the actual image (from the attachments) using the name above.
+- The CSS will display the image top-aligned and sized using `background-size: contain` so the image won't be zoomed in.
+- If you prefer the image to fill and crop instead, change `background-size: contain` to `background-size: cover` in `css/styles.css`.
+
+If you'd like, I can also convert the image into a web-optimized file *if* you paste a base64 data URL here or provide the SVG source.

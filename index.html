@@ -1,0 +1,581 @@
+ <!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Resource Group - Empowering Neurodiverse Kids</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="css/styles.css">
+ <script src="/_sdk/element_sdk.js"></script>
+ <script src="/_sdk/data_sdk.js" defer></script>
+ <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+ <script src="js/main.js" defer></script>
+ <script src="js/nav.js" defer></script>
+ </head>
+ <body class="gradient-bg min-h-full">
+  <header><!-- Navigation -->
+   <nav class="acrylic fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16">
+      <div class="flex items-center">
+       <div class="flex-shrink-0">
+        <img src="logo.svg" alt="STEM Resource Group Logo" class="w-10 h-10" />
+       </div>
+       <div class="ml-4">
+        <h1 class="text-xl font-bold text-gray-800">STEM Resource Group</h1>
+       </div>
+      </div>
+      <div class="hidden md:block">
+       <div class="ml-10 flex items-baseline space-x-4"><a href="#home" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a> <a href="#about" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a> <a href="#programs" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">Programs</a> <a href="#events" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">Events</a> <a href="#stories" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">Stories</a> <a href="#contact" class="nav-link text-gray-700 hover:text-[#a32b6b] px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+       </div>
+    </div><button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle mobile menu">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+     </svg></button>
+     </div>
+    </div>
+     <div id="mobile-menu" class="md:hidden hidden acrylic border-t">
+     <div class="px-2 pt-2 pb-3 space-y-1"><a href="#home" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">Home</a> <a href="#about" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">About</a> <a href="#programs" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">Programs</a> <a href="#events" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">Events</a> <a href="#stories" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">Stories</a> <a href="#contact" class="nav-link block px-3 py-2 text-gray-700 hover:text-[#a32b6b]">Contact</a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main class="pt-0"><!-- Hero Section -->
+   <section id="home" class="hero-gradient text-white relative">
+    <div class="min-h-screen flex flex-col">
+      <div class="flex-grow flex items-center">
+        <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 mt-16">
+          <div class="section-fade backdrop-blur-sm bg-black/10 p-8 rounded-3xl mb-16">
+            <h1 id="hero-tagline" class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-shadow">Committed to the Community – Empowering Neurodiverse Kids for a Brighter Future</h1>
+            <p id="hero-subtitle" class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto text-shadow">Supporting children with autism, cerebral palsy, epilepsy, and related neurological conditions in Nairobi, Kenya and beyond</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button id="cta-learn" class="bg-white/90 backdrop-blur-sm text-[#a32b6b] px-8 py-4 rounded-full font-semibold text-lg hover:bg-white transition-colors shadow-lg">Learn More</button>
+              <button id="cta-join" class="bg-[#a32b6b]/90 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#a32b6b] transition-colors shadow-lg">Join Us</button>
+              <button id="cta-events" class="bg-green-500/90 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-500 transition-colors shadow-lg">Events</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pb-0 icon-bounce">
+        <svg class="w-8 h-8 mx-auto text-white opacity-75" fill="none" stroke="currentColor" viewbox="0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </div>
+   </section><!-- About Us Section -->
+   <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">About STEM Resource Group</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p id="mission-text" class="text-xl text-gray-600 max-w-3xl mx-auto">Founded in 2019 by Kate Mwanzia-Kagema, SRG is dedicated to spreading hope, creating awareness, and fostering independence for children with neurological conditions.</p>
+<div class="carousel-container relative rounded-2xl overflow-hidden max-w-4xl mx-auto">
+  <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+    <div class="carousel-slide flex-shrink-0 w-full">
+      <img src="images/clean 1.jpg" alt="Neurodiverse children 1" class="w-full h-64 md:h-80 object-contain" />
+    </div>
+    <div class="carousel-slide flex-shrink-0 w-full">
+      <img src="images/clean 2.jpg" alt="Neurodiverse children 2" class="w-full h-64 md:h-80 object-contain" />
+    </div>
+    <div class="carousel-slide flex-shrink-0 w-full">
+      <img src="images/clean 3.jpg" alt="Neurodiverse children 3" class="w-full h-64 md:h-80 object-contain" />
+    </div>
+    <div class="carousel-slide flex-shrink-0 w-full">
+      <img src="images/clean4.jpg" alt="Neurodiverse children 4" class="w-full h-64 md:h-80 object-contain" />
+    </div>
+  </div>
+  <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-colors" aria-label="Previous slide">
+    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-colors" aria-label="Next slide">
+    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+  <div class="carousel-indicators absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors active" aria-label="Go to slide 1"></button>
+    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" aria-label="Go to slide 2"></button>
+    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" aria-label="Go to slide 3"></button>
+    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" aria-label="Go to slide 4"></button>
+  </div>
+</div>
+      </div>
+      <div class="text-center mb-16">
+       <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Story</h3>
+        <p class="text-gray-600 mb-6">STEM Resource Group began as a vision to create a more inclusive world for neurodiverse children. Through collaboration with advocates like Sandy in South Africa, we've built an international network of support and hope.</p>
+        <div class="flex items-center justify-center space-x-2">
+         <svg class="w-2 h-2 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+         </svg>
+         <h4 class="font-semibold text-gray-800">Compassionate Care</h4>
+        </div>
+        <p class="text-gray-600 text-sm">Every child deserves understanding and support</p>
+       </div>
+      </div>
+      <div class="mb-16">
+       <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Journey</h3>
+       <div class="relative max-w-4xl mx-auto">
+        <div class="space-y-8">
+         <div class="timeline-item relative pl-16">
+          <div class="timeline-dot top-8"></div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+           <h4 class="font-bold text-blue-600 mb-2">2019 - Foundation</h4>
+           <p class="text-gray-600">Kate Mwanzia-Kagema establishes STEM Resource Group with a vision to support neurodiverse children</p>
+          </div>
+         </div>
+         <div class="timeline-item relative pl-16">
+          <div class="timeline-dot top-8 green"></div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+           <h4 class="font-bold text-green-600 mb-2">2020-2021 - Growth</h4>
+           <p class="text-gray-600">Launch of donation drives and community outreach programs across Nairobi</p>
+          </div>
+         </div>
+         <div class="timeline-item relative pl-16">
+          <div class="timeline-dot top-8 yellow"></div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+           <h4 class="font-bold text-yellow-600 mb-2">2022-2024 - International Partnerships</h4>
+           <p class="text-gray-600">Collaboration with Advocate Mother Sandy and expansion to Morocco, Tunisia partnerships</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programs & Impact Section -->
+   <section id="programs" class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Programs &amp; Impact</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive support services designed to empower children and families in the neurodiverse community</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"><!-- Program Cards -->
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a3 3 0 000-6h-1m0 6V4m0 6h6m-7 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Occupational Therapy</h3>
+        <p class="text-gray-600 mb-4">Professional therapy services and support reflecting World OT Day initiatives</p>
+        <div class="text-blue-600 font-semibold cursor-pointer" onclick="showProgramDetails('Occupational Therapy', 'Professional occupational therapy services that support World OT Day initiatives. We provide comprehensive therapy to help children develop essential life skills, improve motor coordination, and achieve greater independence. Our therapists work closely with families to create personalized treatment plans that address each child\'s unique needs.')">
+         Learn More →
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Community Initiatives</h3>
+        <p class="text-gray-600 mb-4">Donation drives, outreach programs, and comprehensive caregiver support</p>
+        <div class="text-green-600 font-semibold cursor-pointer" onclick="showProgramDetails('Community Initiatives', 'Our community initiatives focus on building strong support networks for families affected by neurological conditions. We organize donation drives to fund essential services, run outreach programs to raise awareness, and provide comprehensive caregiver support through training and resources. These initiatives help create sustainable community-based solutions that empower families and promote inclusion.')">
+         Learn More →
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Innovative Campaigns</h3>
+        <p class="text-gray-600 mb-4">Creative initiatives like "Nosh for Josh" and "Be My Voice One Cookie at a Time"</p>
+        <div class="text-yellow-600 font-semibold cursor-pointer" onclick='showProgramDetails("Innovative Campaigns", "Creative initiatives like \"Nosh for Josh\" and \"Be My Voice One Cookie at a Time\" aim to raise awareness and funds through fun, engaging activities. These campaigns bring communities together to support neurodiverse children and promote understanding of neurological conditions.")'>
+         Learn More →
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Educational Partnerships</h3>
+        <p class="text-gray-600 mb-4">YesIAM Learning integration of Montessori methods with movement therapy</p>
+        <div class="text-purple-600 font-semibold cursor-pointer" onclick='showProgramDetails("Educational Partnerships", "Our educational partnerships integrate Montessori methods with movement therapy through the YesIAM Learning program. We collaborate with schools and educational institutions to create inclusive learning environments that support neurodiverse children in developing their full potential.")'>
+         Learn More →
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">International Network</h3>
+        <p class="text-gray-600 mb-4">Partnerships with AAEBSM Morocco and NeuroGen seminars across Africa</p>
+        <div class="text-red-600 font-semibold cursor-pointer" onclick="showProgramDetails('International Network', 'Our international network connects families and professionals across Africa and beyond. We partner with organizations in Morocco, Tunisia, and other countries to share resources, knowledge, and support for neurodiverse children. Through these partnerships, we create a global community dedicated to improving lives and fostering inclusion.')">
+         Learn More →
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+         <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Advocacy &amp; Awareness</h3>
+        <p class="text-gray-600 mb-4">Raising awareness about autism, cerebral palsy, epilepsy, and neurological conditions</p>
+        <div class="text-indigo-600 font-semibold cursor-pointer" onclick="showProgramDetails('Advocacy & Awareness', 'Our advocacy and awareness initiatives focus on raising awareness about autism, cerebral palsy, epilepsy, and other neurological conditions. We work to educate communities, reduce stigma, and promote understanding and acceptance of neurodiverse individuals. Through public campaigns, educational workshops, and community outreach, we strive to create a more inclusive society where neurodiverse children can thrive.')">
+         Learn More →
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Events & Webinars Section -->
+   <section id="events" class="py-20 bg-white">
+    <div class="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Events &amp; Webinars</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our community conversations and educational seminars</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+       <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+        <div class="flex items-center mb-4">
+         <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-gray-800">Weekly Lives (Every Friday)</h3>
+        </div>
+  <p class="text-gray-600 mb-4">Join Kate &amp; Sandy every week for conversations about autism, cerebral palsy, epilepsy, and community support</p>
+  <a href="https://www.instagram.com/stem.resource.group/" target="_blank" rel="noopener noreferrer" class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors">Join on Instagram</a>
+  <a href="https://www.facebook.com/stemresourcegroup" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">Join on Facebook</a>
+</div>
+       <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+        <div class="flex items-center mb-4">
+         <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+         </div>
+         <h3 class="text-xl font-bold text-gray-800">International Seminars</h3>
+        </div>
+  <p class="text-gray-600 mb-4">Medical webinars and educational seminars in Casablanca, Tunisia, Sfax, and across Africa</p>
+  <a href="https://calendar.google.com/calendar/u/0?cid=ZTIyNDEyNjZjZGE0OTUzMGFhNmNkZmI0NDExZTI4NjQyYzFlZjllN2RmZmYwNjZhOWE1ZDQzMGU2YWZhY2EzN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" aria-label="View international seminar schedule on Google Calendar" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors">View Schedule</a>
+       </div>
+      <div id="upcoming-events" class="bg-gray-50 rounded-2xl p-8">
+       <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-gray-800">Upcoming Events</h3>
+       </div>
+       <div id="upcoming-events-list" class="space-y-4"></div>
+      </div>
+      <div id="static-calendar-container" class="bg-gray-50 rounded-2xl p-8 mt-0">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Calendar View</h3>
+        <div class="w-full overflow-hidden rounded-lg">
+          <iframe src="https://calendar.google.com/calendar/embed?src=e2241266cda49530aa6cdfb4411e28642c1ef9e7dfff066a9a5d430e6afaca37%40group.calendar.google.com&ctz=Africa%2FNairobi" style="border: 0; width: 100%; height: 600px;" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Stories & Spotlights Section -->
+   <section id="stories" class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Stories &amp; Spotlights</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Celebrating resilience, empowerment, and the incredible journeys of our community</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mb-12"><!-- Featured Story -->
+       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-48 flex items-center justify-center">
+         <div class="text-center text-white">
+          <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <h3 class="text-xl font-bold">JSIDI Story</h3>
+         </div>
+        </div>
+        <div class="p-8">
+         <h3 class="text-xl font-bold text-gray-800 mb-4">Joshua Sandy Institute for Diversity and Inclusion</h3>
+         <p class="text-gray-600 mb-4">A powerful story of transformation and hope, showcasing how dedicated support can change lives and create lasting impact in the neurodiverse community.</p><button class="text-purple-600 font-semibold hover:text-purple-700 transition-colors"> Read Full Story → </button>
+        </div>
+       </div><!-- Testimonials -->
+       <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-md">
+         <div class="flex items-start mb-4">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"><span class="text-blue-600 font-bold text-lg">M</span>
+          </div>
+          <div>
+           <h4 class="font-bold text-gray-800">Maria K.</h4>
+           <p class="text-gray-500 text-sm">Parent</p>
+          </div>
+         </div>
+         <p class="text-gray-600 italic">"SRG has been a beacon of hope for our family. The support and understanding we've received has transformed our journey with autism."</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+         <div class="flex items-start mb-4">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"><span class="text-green-600 font-bold text-lg">J</span>
+          </div>
+          <div>
+           <h4 class="font-bold text-gray-800">James O.</h4>
+           <p class="text-gray-500 text-sm">Caregiver</p>
+          </div>
+         </div>
+         <p class="text-gray-600 italic">"The community initiatives have connected us with other families facing similar challenges. We no longer feel alone in this journey."</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+         <div class="flex items-start mb-4">
+          <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4"><span class="text-yellow-600 font-bold text-lg">A</span>
+          </div>
+          <div>
+           <h4 class="font-bold text-gray-800">Dr. Amina S.</h4>
+           <p class="text-gray-500 text-sm">Partner Organization</p>
+          </div>
+         </div>
+         <p class="text-gray-600 italic">"Working with SRG has shown me the power of community-driven support. Their approach is both professional and deeply compassionate."</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Get Involved Section -->
+   <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Get Involved</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our mission to create a more inclusive world for neurodiverse children</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+       <div class="text-center">
+        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+         <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Volunteer</h3>
+        <p class="text-gray-600 mb-6">Share your skills and time to support our programs and community initiatives</p><button onclick="showVolunteerForm()" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"> Join as Volunteer </button>
+       </div>
+       <div class="text-center">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+         <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Donate</h3>
+        <p class="text-gray-600 mb-6">Support our programs with one-time or recurring donations to make a lasting impact</p>
+        <div class="space-y-2"><button onclick="showDonationModal()" class="w-full bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors"> One-time Donation </button> <button onclick="showMonthlyGivingModal()" class="w-full bg-green-100 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-200 transition-colors"> Monthly Giving </button>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+         <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 6V9a2 2 0 00-2-2H10a2 2 0 00-2 2v3.1M21 21l-6-6m6 6v-4.5m0 4.5h-4.5" />
+         </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Partner</h3>
+        <p class="text-gray-600 mb-6">Collaborate with us as a school, NGO, or corporate partner to expand our reach</p><button onclick="showPartnershipForm()" class="bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-700 transition-colors"> Explore Partnerships </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Resources Section -->
+   <section class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Resources &amp; Help</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Access educational materials, support groups, and advocacy resources</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">Educational Materials</h3>
+<div class="text-blue-600 font-semibold text-sm cursor-pointer hover:text-blue-700 transition-colors" onclick='showEducationalMaterials()'>Download Resources →</div>
+       </div>
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">Support Groups</h3>
+<div class="text-green-600 font-semibold text-sm cursor-pointer hover:text-green-700 transition-colors" onclick='showSupportGroups()'>Find Groups →</div>
+       </div>
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a3 3 0 000-6h-1m0 6V4m0 6h6m-7 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">Therapy Resources</h3>
+<div class="text-yellow-600 font-semibold text-sm cursor-pointer hover:text-yellow-700 transition-colors" onclick='showTherapyResources()'>Explore Options →</div>
+       </div>
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">Advocacy Guides</h3>
+<div class="text-purple-600 font-semibold text-sm cursor-pointer hover:text-purple-700 transition-colors" onclick='showAdvocacyGuides()'>Get Guides →</div>
+       </div>
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">Newsletters</h3>
+<div class="text-red-600 font-semibold text-sm cursor-pointer hover:text-red-700 transition-colors" onclick='showNewsletters()'>Subscribe →</div>
+       </div>
+       <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+         <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 mb-2">FAQ &amp; Help</h3>
+<div class="text-indigo-600 font-semibold text-sm cursor-pointer hover:text-indigo-700 transition-colors" onclick='showFAQHelp()'>View FAQ →</div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="section-fade">
+      <div class="text-center mb-16">
+       <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+       <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get in touch with us to learn more about our programs or get support</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12"><!-- Contact Form -->
+       <div class="bg-gray-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a message</h3>
+        <form id="contact-form" class="space-y-6">
+         <div><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+         </div>
+         <div><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+         </div>
+         <div><label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label> <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"> <option value="">Select a subject</option> <option value="general">General Inquiry</option> <option value="support">Support Request</option> <option value="volunteer">Volunteer Opportunity</option> <option value="partnership">Partnership</option> <option value="donation">Donation</option> </select>
+         </div>
+         <div><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+         </div><button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"> Send Message </button>
+        </form>
+        <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
+       </div><!-- Contact Information -->
+       <div class="space-y-8">
+        <div>
+         <h3 class="text-2xl font-bold text-gray-800 mb-6">Get in touch</h3>
+         <div class="space-y-6">
+          <div class="flex items-start">
+           <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+           </div>
+           <div>
+            <h4 class="font-semibold text-gray-800">Email</h4>
+            <p id="contact-email" class="text-gray-600">
+              <a href="mailto:info@stemresourcegroup.org" class="hover:text-blue-600 transition-colors">info@stemresourcegroup.org</a>
+            </p>
+           </div>
+          </div>
+          <div class="flex items-start">
+           <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+           </div>
+           <div>
+            <h4 class="font-semibold text-gray-800">Phone</h4>
+            <p id="contact-phone" class="text-gray-600">+254 733 213 063</p>
+           </div>
+          </div>
+          <div class="flex items-start">
+           <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+           </div>
+           <div>
+            <h4 class="font-semibold text-gray-800">Location</h4>
+            <p class="text-gray-600">Nairobi, Kenya</p>
+           </div>
+          </div>
+         </div>
+        </div><!-- Social Links -->
+        <div>
+         <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a href="https://www.instagram.com/stemresourcegroup" class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center hover:bg-pink-200 transition-colors" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                  </a>
+
+                  <a href="https://wa.me/254733213063" class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                  </a>
+
+                  <a href="https://www.facebook.com/stemresourcegroup" class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.06 5.66 21.18 10.44 21.95v-6.94H8.08v-2.99h2.36V9.41c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.29h-1.18c-1.16 0-1.52.72-1.52 1.46v1.74h2.59l-.41 2.99h-2.18v6.94C18.34 21.18 22 17.06 22 12.07z"/>
+                    </svg>
+                  </a>
+                </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+       </div>
+      </div>
+     </div>
+    </div>
+<!-- Closing Quote Section -->
+        <div class="max-w-2xl mx-auto mt-10 bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-2xl shadow-xl text-center hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out">
+    <blockquote class="text-2xl md:text-3xl font-bold leading-relaxed italic">
+      "I am different, not less."
+    </blockquote>
+  <footer class="mt-4 text-base font-medium opacity-90">– Temple Grandin</footer>
+</div>
+
+  </main><!-- Footer -->
+
+  <footer class="bg-gray-800 text-white py-12">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+     <div>
+      <div class="flex items-center mb-4">
+       <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center mr-3"><span class="text-white font-bold text-lg">SRG</span>
+       </div><span class="text-xl font-bold">STEM Resource Group</span>
+      </div>
+      <p class="text-gray-300 text-sm">Empowering neurodiverse children for a brighter future through community support and advocacy.</p>
+     </div>
+     <div>
+      <h4 class="font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+       <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+       <li><a href="#programs" class="text-gray-300 hover:text-white transition-colors">Programs</a></li>
+       <li><a href="#events" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+       <li><a href="#stories" class="text-gray-300 hover:text-white transition-colors">Stories</a></li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="font-semibold mb-4">Get Involved</h4>
+      <ul class="space-y-2 text-sm">
+       <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Volunteer</a></li>
+       <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Donate</a></li>
+       <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Partner</a></li>
+       <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Resources</a></li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="font-semibold mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm text-gray-300">
+       <li>info@stemresourcegroup.org</li>
+       <li>+254 733 213 063</li>
+       <li>Nairobi, Kenya</li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
+     <p>© 2024 STEM Resource Group. All rights reserved. | Committed to the Community</p>
+    </div>
+   </div>
+  </footer><!-- Modal Overlays -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+   <div id="modal-content" class="bg-white rounded-2xl max-w-md w-full max-h-90 overflow-y-auto"><!-- Modal content will be inserted here -->
+   </div>
+  </div>
+  </body>
+</html>
