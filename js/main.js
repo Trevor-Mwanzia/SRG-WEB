@@ -73,36 +73,36 @@ async function fetchUpcomingEvents() {
         // Fallback to static events if API fails
         events = JSON.parse(localStorage.getItem('events')) || [
             {
-                date: new Date(2025, 10, 15),
+                date: new Date(2025, 11, 15), // December 15, 2025
                 title: 'Autism Awareness Workshop',
                 location: 'Nairobi, Kenya',
                 rsvpLink: '#'
             },
             {
-                date: new Date(2025, 10, 20),
+                date: new Date(2025, 11, 20), // December 20, 2025
                 title: 'Parent Support Group Meeting',
                 location: 'Online (Zoom)',
                 rsvpLink: '#'
             },
             {
-                date: new Date(2025, 11, 5),
+                date: new Date(2025, 11, 25), // December 25, 2025
                 title: 'Holiday Special Program',
                 location: 'SRG Center, Nairobi',
                 rsvpLink: '#'
             },
             {
-                date: new Date(2025, 10, 25),
+                date: new Date(2026, 0, 10), // January 10, 2026
                 title: 'Facebook Live: Understanding Autism',
                 location: 'Facebook Live',
                 rsvpLink: 'https://www.facebook.com/stemresourcegroup'
             },
             {
-                date: new Date(2025, 11, 10),
+                date: new Date(2026, 0, 17), // January 17, 2026
                 title: 'Facebook Q&A: Cerebral Palsy',
                 location: 'Facebook Live',
                 rsvpLink: 'https://www.facebook.com/stemresourcegroup'
             }
-        ].map(event => ({...event, date: new Date(event.date)}));
+        ].map(event => ({ ...event, date: new Date(event.date) }));
         renderEvents();
     }
 }
@@ -127,11 +127,11 @@ function renderEvents() {
 
         const dateBox = document.createElement('div');
         dateBox.className = 'w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center mr-4';
-        
+
         const monthEl = document.createElement('span');
         monthEl.className = 'text-xs text-blue-600 font-semibold';
         monthEl.textContent = ev.date.toLocaleString(undefined, { month: 'short' }).toUpperCase();
-        
+
         const dayEl = document.createElement('span');
         dayEl.className = 'text-lg font-bold text-blue-600';
         dayEl.textContent = ev.date.getDate();
@@ -143,7 +143,7 @@ function renderEvents() {
         const title = document.createElement('h4');
         title.className = 'font-bold text-gray-800';
         title.textContent = ev.title;
-        
+
         const desc = document.createElement('p');
         desc.className = 'text-gray-600';
         desc.textContent = `${ev.date.toLocaleDateString(undefined, { dateStyle: 'medium' })} — ${ev.location}`;
@@ -161,7 +161,7 @@ function renderEvents() {
         rightBtn.href = ev.rsvpLink;
         rightBtn.className = 'bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors';
         rightBtn.textContent = 'RSVP';
-        
+
         rightDiv.appendChild(rightBtn);
 
         item.appendChild(left);
@@ -220,8 +220,8 @@ function renderStaticCalendar() {
         const currentDate = new Date(year, month, i);
         const hasEvent = events.some(event => {
             return event.date.getFullYear() === currentDate.getFullYear() &&
-                   event.date.getMonth() === currentDate.getMonth() &&
-                   event.date.getDate() === currentDate.getDate();
+                event.date.getMonth() === currentDate.getMonth() &&
+                event.date.getDate() === currentDate.getDate();
         });
 
         if (hasEvent) {
@@ -239,7 +239,7 @@ function renderStaticCalendar() {
 function initMobileMenu() {
     const btn = document.getElementById('mobile-menu-btn');
     if (btn) {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenu) mobileMenu.classList.toggle('hidden');
         });
@@ -249,7 +249,7 @@ function initMobileMenu() {
 // Smooth scrolling for navigation links
 function initSmoothScroll() {
     document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
@@ -270,7 +270,7 @@ function initSmoothScroll() {
 function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
         const formMessage = document.getElementById('form-message');
         if (!formMessage) return;
@@ -311,21 +311,21 @@ function initHeroCTAs() {
     const eventsBtn = document.getElementById('cta-events');
 
     if (learnBtn) {
-        learnBtn.addEventListener('click', function(e) {
+        learnBtn.addEventListener('click', function (e) {
             e.preventDefault();
             scrollToSection('about');
         });
     }
 
     if (joinBtn) {
-        joinBtn.addEventListener('click', function(e) {
+        joinBtn.addEventListener('click', function (e) {
             e.preventDefault();
             scrollToSection('contact');
         });
     }
 
     if (eventsBtn) {
-        eventsBtn.addEventListener('click', function(e) {
+        eventsBtn.addEventListener('click', function (e) {
             e.preventDefault();
             scrollToSection('events');
         });
@@ -719,80 +719,80 @@ function showFAQHelp() {
 }
 
 // Carousel functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const carouselContainer = document.querySelector('.carousel-container');
-  if (!carouselContainer) return;
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (!carouselContainer) return;
 
-  const slides = document.querySelectorAll('.carousel-slide');
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
-  const indicators = document.querySelectorAll('.carousel-indicator');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const indicators = document.querySelectorAll('.carousel-indicator');
 
-  let currentIndex = 0;
-  let autoPlayInterval;
+    let currentIndex = 0;
+    let autoPlayInterval;
 
-  function showSlide(index) {
-    const slidesContainer = document.querySelector('.carousel-slides');
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-    indicators.forEach((indicator, i) => {
-      indicator.classList.toggle('active', i === index);
+    function showSlide(index) {
+        const slidesContainer = document.querySelector('.carousel-slides');
+        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Event listeners
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay();
+        });
+    }
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+            stopAutoPlay();
+            startAutoPlay();
+        });
     });
-    currentIndex = index;
-  }
 
-  function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
+    // Pause on hover
+    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+    carouselContainer.addEventListener('mouseleave', startAutoPlay);
 
-  function prevSlide() {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
-  }
-
-  function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 5000);
-  }
-
-  function stopAutoPlay() {
-    clearInterval(autoPlayInterval);
-  }
-
-  // Event listeners
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      stopAutoPlay();
-      startAutoPlay();
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      stopAutoPlay();
-      startAutoPlay();
-    });
-  }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      showSlide(index);
-      stopAutoPlay();
-      startAutoPlay();
-    });
-  });
-
-  // Pause on hover
-  carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-  carouselContainer.addEventListener('mouseleave', startAutoPlay);
-
-  // Start autoplay
-  startAutoPlay();
+    // Start autoplay
+    startAutoPlay();
 });
 
 // Close modal when clicking outside
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     // only close if click is on overlay (delegated from modal overlay in DOM)
     const overlay = document.getElementById('modal-overlay');
     if (overlay && e.target === overlay) {
@@ -892,4 +892,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Cloudflare challenge iframe script preserved from original file
-(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9972d67117d06936',t:'MTc2MTkxMDQwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9972d67117d06936',t:'MTc2MTkxMDQwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();
